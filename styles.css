@@ -1,187 +1,186 @@
 /* the * makes it so that you select everything on the page */
 * {
-    /* box sizing is the property and border box makes it so that the element takes padding border into account as part of height/width basically making height and width the determining factor for the box
+  /* box sizing is the property and border box makes it so that the element takes padding border into account as part of height/width basically making height and width the determining factor for the box
     outline regardless of padding. Margin allows space outside of borders whereas padding changes margin from something to the border from the inside*/
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* when it comes to attributes, the generic all is lowest in hierarchy, then tags, then class, then id */
-    font-family: 'Inter', sans-serif;
-    color: #0f172a;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* when it comes to attributes, the generic all is lowest in hierarchy, then tags, then class, then id */
+  font-family: "Inter", sans-serif;
+  color: #0f172a;
 }
 
-body{
-    /* the reason you do the things below is because you add the flex property which adds the ability to do the bottom step which makes the body take up entire view */
-    font-size: 1.0rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+  /* the reason you do the things below is because you add the flex property which adds the ability to do the bottom step which makes the body take up entire view */
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-i{
-    cursor: pointer;
+i {
+  cursor: pointer;
 }
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
-.button_grid button{
-    cursor: pointer;
-    padding: .3rem;
-    border-radius: .5rem;
-    box-sizing: border-box;
-    border: 1px solid transparent
+.button_grid button {
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  border: 1px solid transparent;
 }
 
-.button_grid button:hover{
-    border: 1px solid rgb(212, 212, 212);
-    
-    box-shadow: 0 4 1 rgb(212, 212, 212);
+.button_grid button:hover {
+  border: 1px solid rgb(212, 212, 212);
+
+  box-shadow: 0 4 1 rgb(212, 212, 212);
 }
 
 .google-header {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-/* you can select elements from your other index sheet by addressing either id or the title.. in this case the container. display is the element and flex is the value... this flex display has a default orientation which is horizontal which is why orientation changes as soon
+/* you can select elements from your other index sheet by addressing either id or the title.. 
+in this case the container. display is the element and flex is the value... 
+this flex display has a default orientation which is horizontal which is why orientation changes as soon
 as you make it display flex */
 header {
-    display: flex;
-    /* justify content is how they are laid out across the axis(horizontal with flex) and alignment
+  display: flex;
+  /* justify content is how they are laid out across the axis(horizontal with flex) and alignment
     is how they are aligned perpindicular to the access ... in this case it makes sure they have the same height*/
-    justify-content: space-between;
-    align-items: center;
-    /* good to use padding vs margin... they do the same thing but padding is preferred. margin is outside the element*/
-    padding: 1rem;
-    /* when items are squished, the gap will set a minimum distance between the elements of header and nav container wheras margin may allow overlap */
-    gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  /* good to use padding vs margin... they do the same thing but padding is preferred. margin is outside the element*/
+  padding: 1rem;
+  /* when items are squished, the gap will set a minimum distance between the elements of header and nav container wheras margin may allow overlap */
+  gap: 1rem;
 }
 
 /* you select a class by using a period */
 .nav_container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .text_link {
-    /* color inherit inherits the default color from the document */
-    color: inherit;
-    /* text-decoration is going to target the underline under each link */
-    text-decoration: none;
+  /* color inherit inherits the default color from the document */
+  color: inherit;
+  /* text-decoration is going to target the underline under each link */
+  text-decoration: none;
 }
 
 .text_link:hover {
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .icon_link {
-    color: rgb(158, 158, 158);
-    font-size: 1.1rem;
+  color: rgb(158, 158, 158);
+  font-size: 1.1rem;
 
-    width: 30px;
-    aspect-ratio: 1/1;
-    border-radius: 100%;
-    overflow: hidden;
-    /* the following grid and center are used to place individual items directly in the middle of the element... anything in this case in the icon link class */
-    display: grid;
-    place-items: center;
+  width: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  overflow: hidden;
+  /* the following grid and center are used to place individual items directly in the middle of the element... anything in this case in the icon link class */
+  display: grid;
+  place-items: center;
 }
 
 .icon_link:hover {
-    background-color: rgb(241, 240, 240);
+  background-color: rgb(241, 240, 240);
 }
 
-
 .img_button {
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
 }
 
 .img_button img {
-    width: 30px;
-    aspect-ratio: 1/1;
-    /* the overflow determines what happens when content overflows the border... in this case it makes it invisible */
-    overflow: hidden;
-    /* the radius determines the border shape */
-    border-radius: 100%;
+  width: 30px;
+  aspect-ratio: 1/1;
+  /* the overflow determines what happens when content overflows the border... in this case it makes it invisible */
+  overflow: hidden;
+  /* the radius determines the border shape */
+  border-radius: 100%;
 }
 
 main {
-    /* the flex value here makes the main section the 'greediest' flex value to take up the most space */
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-direction: column;
+  /* the flex value here makes the main section the 'greediest' flex value to take up the most space */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
 }
-.main_text{
-    font-size: 3rem;
+.main_text {
+  font-size: 3rem;
 }
 
 .input_bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    padding: 1rem;
-    max-width: 500px;
-    border: 1px solid rgb(235, 235, 235);
-    border-radius: 1rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  max-width: 500px;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 1rem;
 }
 
 .input_bar input {
-    flex: 1;
-    border: none;
-    outline: none;
-    width: 100%;
+  flex: 1;
+  border: none;
+  outline: none;
+  width: 100%;
 }
 
 .input_bar:hover,
 .input_bar:focus-within {
-    box-shadow: 0 0 4px 1px rgb(235, 235, 235);
+  box-shadow: 0 0 4px 1px rgb(235, 235, 235);
 }
 
 .camera_microphone {
-    display: flex;
-    align-items: center;
-    gap: .4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
-.input_icon:hover{
-    opacity: 0.6;
+.input_icon:hover {
+  opacity: 0.6;
 }
-.language_text{
-    font-size: .8rem;
+.language_text {
+  font-size: 0.8rem;
 }
-.language_link{
-    color: royalblue;
+.language_link {
+  color: royalblue;
 }
-.language_link:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-footer{
-   background-color: rgb(233, 233, 233);
-   font-size: .8rem;
+.language_link:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-footer>div{
-    padding: 1rem;
+footer {
+  background-color: rgb(233, 233, 233);
+  font-size: 0.8rem;
 }
-.footer_grid{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
-}
-.footer_links{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-@media (min-width:640px){
 
+footer > div {
+  padding: 1rem;
+}
+.footer_grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.footer_links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
 }
